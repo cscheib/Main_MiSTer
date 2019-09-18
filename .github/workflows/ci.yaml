@@ -6,6 +6,7 @@ on: [push, pull_request]
 jobs:
   build: 
     name: build job
+    runs-on: ubuntu-latest
     container: hello-world
     steps:
     - name: Test
