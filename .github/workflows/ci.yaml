@@ -6,5 +6,6 @@ on: [push, pull_request]
 jobs:
   build: 
     name: build job
-    container:
-      image: hello-world
+    container: hello-world
+    steps:
+    - name: Test
