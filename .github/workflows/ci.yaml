@@ -7,9 +7,9 @@ jobs:
   build: 
     name: build job
     runs-on: ubuntu-latest
-    container: hello-world
+    container: alpine
     steps:
     - name: Test
       uses: actions/checkout@v1
     - name: container blah
-      run: /hello
+      run: echo "hello world"
