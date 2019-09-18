@@ -9,3 +9,4 @@ jobs:
     container: hello-world
     steps:
     - name: Test
+      uses: actions/checkout@v1
