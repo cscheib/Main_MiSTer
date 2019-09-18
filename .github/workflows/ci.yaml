@@ -12,4 +12,4 @@ jobs:
     - name: Test
       uses: actions/checkout@v1
     - name: container blah
-      run: /bin/bash -c 'echo "hello world"'
+      run: /bin/ash -c 'echo "hello world"'
