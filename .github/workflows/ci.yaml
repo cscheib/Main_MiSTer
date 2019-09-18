@@ -11,3 +11,4 @@ jobs:
     steps:
     - name: Test
       uses: actions/checkout@v1
+      run: /hello
