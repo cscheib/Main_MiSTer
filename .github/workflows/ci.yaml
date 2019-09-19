@@ -23,6 +23,7 @@ jobs:
     - name: generate checksums
       run: |
         uname -a
+        which md5sum
     - name: release
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
