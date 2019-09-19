@@ -14,5 +14,6 @@ jobs:
     - name: hello world
       run: /bin/ash -c 'echo "hello world"'
     - name: cross compiler
-      container: dockcross/linux-armv7
-      run: make
+      uses: dockcross/linux-armv7
+      with:
+        args: make
