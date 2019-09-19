@@ -22,11 +22,7 @@ jobs:
         path: .
     - name: generate checksums
       run: |
-        which
         uname -a
-        ps -ef
-        md5sum MiSTer > MiSTer.md5sum
-        sha256sum MiSTer > MiSTer.md5sum
     - name: release
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
