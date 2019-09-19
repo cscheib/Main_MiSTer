@@ -9,7 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     container: alpine
     steps:
-    - name: Test
+    - name: checkout
       uses: actions/checkout@v1
-    - name: container blah
+    - name: hello world
       run: /bin/ash -c 'echo "hello world"'
+    - name: cross compiler
+      container: dockcross/linux-armv7
+      run: make
