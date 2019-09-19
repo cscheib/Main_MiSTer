@@ -17,7 +17,7 @@ jobs:
         RUNNER: ${{ toJson(runner) }}
     - uses: actions/upload-artifact@master
       with:
-        name: MiSTer-${{  }}
+        name: MiSTer-${{ github.sha }}
         path: ./MiSTer
     - uses: actions/upload-artifact@master
       with:
