@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: docker://dockcross/linux-armv7
+    - uses: docker://dockcross/linux-armv7a
       with:
-        args: make BASE='armv7-unknown-linux-gnueabi'
+        args: make BASE='armv7a-unknown-linux-gnueabi'
     - uses: actions/upload-artifact@master
       with:
         name: MiSTer-${{ github.sha }}
