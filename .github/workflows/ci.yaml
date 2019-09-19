@@ -45,4 +45,4 @@ jobs:
     #     MATRIX_CONTEXT: ${{ toJson(matrix) }}
     #   run: echo "$MATRIX_CONTEXT"
     - name: ${{ github.event.head_commit.timestamp }}
-      run: echo hello
+      run: echo ${{ github.event.head_commit.timestamp }}
