@@ -23,8 +23,8 @@ jobs:
     - name: generate checksums
       run: |
         uname -a
-        md5sum MiSTer
-        sha256sum MiSTer
+        md5sum MiSTer | tee MiSTer.md5sum
+        sha256sum MiSTer | tee MiSTer.sha256sum
     - name: release
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
