@@ -12,9 +12,12 @@ jobs:
     - uses: docker://dockcross/linux-armv7
       with:
         args: make BASE='armv7-unknown-linux-gnueabi'
+    - run: echo "$RUNNER"
+      env:
+        RUNNER: ${{ toJson(runner) }}
     - uses: actions/upload-artifact@master
       with:
-        name: MiSTer-${{ github.sha }}
+        name: MiSTer-${{  }}
         path: ./MiSTer
     - uses: actions/upload-artifact@master
       with:
