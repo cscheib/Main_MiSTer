@@ -14,5 +14,8 @@ jobs:
         args: make BASE='armv7-unknown-linux-gnueabi'
     - uses: actions/upload-artifact@master
       with:
-        name: my-artifact
+        name: mister-binary
+        path: ./MiSTer
+    - uses: actions/upload-artifact@master
+        name: mister-build-results
         path: .

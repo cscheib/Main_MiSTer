@@ -1,1 +1,1 @@
-![](https://github.com/cscheib/Main_MiSTer/workflows/build/badge.svg)
+![](https://github.com/cscheib/Main_MiSTer/workflows/.github/workflows/ci.yml/badge.svg)
