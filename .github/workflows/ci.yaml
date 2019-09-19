@@ -16,7 +16,7 @@ jobs:
     - name: cross compiler
       uses: docker://dockcross/linux-armv7
       with:
-        args: make BASE='armv7-unknown-linux-gnueabi'A
+        args: make BASE='armv7-unknown-linux-gnueabi'
     - name: list files
       run: ls -lart
     - name: publish artifact
