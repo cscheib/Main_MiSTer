@@ -12,19 +12,26 @@ jobs:
     - uses: docker://dockcross/linux-armv7a
       with:
         args: make BASE='arm-cortexa8_neon-linux-gnueabihf'
+    - name: generate checksums
+      run: |
+        md5sum MiSTer | tee MiSTer.md5sum
+        sha256sum MiSTer | tee MiSTer.sha256sum
     - uses: actions/upload-artifact@master
       with:
         name: MiSTer-${{ github.sha }}
         path: ./MiSTer
     - uses: actions/upload-artifact@master
       with:
+        name: MiSTer-${{ github.sha }}.md5sum
+        path: ./MiSTer.md5sum
+    - uses: actions/upload-artifact@master
+      with:
+        name: MiSTer-${{ github.sha }}.sha256sum
+        path: ./MiSTer.sha256sum
+    - uses: actions/upload-artifact@master
+      with:
         name: mister-build-tree
         path: .
-    - name: generate checksums
-      run: |
-        uname -a
-        md5sum MiSTer | tee MiSTer.md5sum
-        sha256sum MiSTer | tee MiSTer.sha256sum
     - name: release
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
