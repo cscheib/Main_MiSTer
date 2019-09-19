@@ -16,4 +16,4 @@ jobs:
     - name: cross compiler
       uses: docker://dockcross/linux-armv7
       with:
-        args: make
+        args: make BASE='armv7-unknown-linux-gnueabi'
