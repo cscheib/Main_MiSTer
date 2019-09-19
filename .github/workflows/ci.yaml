@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v1
     - uses: docker://dockcross/linux-armv7a
       with:
-        args: make BASE='armv7a-unknown-linux-gnueabi'
+        args: make BASE='arm-cortexa8_neon-linux-gnueabihf-'
     - uses: actions/upload-artifact@master
       with:
         name: MiSTer-${{ github.sha }}
