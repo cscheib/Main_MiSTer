@@ -17,5 +17,6 @@ jobs:
         name: mister-binary
         path: ./MiSTer
     - uses: actions/upload-artifact@master
-        name: mister-build-results
+      with:
+        name: mister-build-tree
         path: .
